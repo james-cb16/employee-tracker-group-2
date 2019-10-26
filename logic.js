@@ -11,3 +11,10 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
+
+  database.ref().push({
+    employeeName: "",
+    role: "",
+    startDate: "",
+    monthlyRate: 0,
+  })
