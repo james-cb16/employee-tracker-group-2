@@ -25,15 +25,17 @@ var database = firebase.database();
   $("#submit-button").on("click", function(event){
     event.preventDefault();
     var name = $("#employee-name").val()
-    var role = $("#employee-role").val()
-    var startDate = $("#start-date").val()
-    var rate = $("#monthly-rate").val()
+    var roleInput = $("#employee-role").val()
+    var startDateInput = $("#start-date").val()
+    var rateInput = $("#monthly-rate").val()
     database.ref().push({
-        employeeName: "",
-        role: "",
-        startDate: "",
-        monthlyRate: 0,
+        employeeName: name,
+        role: roleInput,
+        startDate: startDateInput,
+        monthlyRate: rateInput,
       })
       console.log(name);
-        console.log(role);
+      console.log(startDateInput);
+      console.log(roleInput);
+      console.log(rateInput);
   });
