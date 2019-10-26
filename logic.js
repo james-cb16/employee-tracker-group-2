@@ -18,3 +18,20 @@ var firebaseConfig = {
     startDate: "",
     monthlyRate: 0,
   })
+
+  database.ref().on("value", function(snapshot) {
+    
+
+
+  });
+
+  var name = $("#employee-name").val()
+  var role = $("#employee-role").val()
+  var startDate = $("#start-date").val()
+  var rate = $("#monthly-rate").val()
+  
+
+  $("#run-search").on("click", function(){
+    console.log(name);
+    console.log(role);
+  });
